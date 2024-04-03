@@ -29,11 +29,7 @@ const Navbar = () => {
         <li onClick={()=>{setMenu("shop")}}><Link to='/' style={{ textDecoration: 'none' }}>Seller Home</Link>{menu==="shop"?<hr/>:<></>}</li>
         <li onClick={()=>{setMenu("sellerHome")}}><Link to='/sellerHome'>Add Part</Link>{menu==="sellerHome"?<hr/>:<></>}</li>
       </ul>
-      <div className="nav-login-cart">
-        {localStorage.getItem('auth-token')
-        ?<button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace("/");}}>Logout</button>
-        :<Link to='/login' style={{ textDecoration: 'none' }}><button>Login</button></Link>}
-      </div>
+      
     </div>
   )
 }
